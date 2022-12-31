@@ -5,6 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { deleteTodos, editTodos, getTodos } from "../Api/taskApis";
 import { AuthContext } from "../authContext/AuthProvider";
 import Loader from "../Components/Loader";
+import NoTasks from "../Components/NoTasks";
 import TodoCard from "../Components/TodoCard";
 import TodoFooter from "../Components/TodoFooter";
 import TodoForm from "../Components/TodoForm";
@@ -116,7 +117,7 @@ const TodoApp = () => {
       });
     },
   });
-
+  console.log(tasks);
   return (
     <>
       {isLoading ? (
@@ -131,6 +132,7 @@ const TodoApp = () => {
               <p className="sm:text-md text-sm">Today:{todayDate}</p>
             </div>
             <TodoForm />
+            {tasks.length === 0 && <NoTasks />}
             {tasks?.map((task, index) => (
               <TodoCard
                 task={task}

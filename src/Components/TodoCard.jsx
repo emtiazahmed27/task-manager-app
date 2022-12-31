@@ -46,7 +46,7 @@ const TodoCard = ({
   };
 
   return (
-    <div className="w-full shadow-sm border border-1 mt-1 rounded border-purple-400 mx-auto flex justify-between items-center px-3 py-3">
+    <div className="w-full shadow-sm border border-1 mt-1 rounded border-purple-400 mx-auto flex justify-between items-center px-3 py-3 cursor-pointer">
       <div className="w-[80%] flex justify-start items-center gap-3">
         <div className="w-[5%]">
           <img

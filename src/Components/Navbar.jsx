@@ -47,11 +47,14 @@ const Navbar = ({ theme, themeChanger }) => {
           onClick={themeChanger}
           className="w-[25px] cursor-pointer"
         />
-        <img
-          src={user ? user?.photoURL : prof}
-          alt=""
-          className="md:block hidden w-[40px] h-[40px] rounded-full cursor-pointer"
-        />
+        <div className="tooltip tooltip-left" data-tip={user?.displayName}>
+          <img
+            src={user ? user?.photoURL : prof}
+            alt=""
+            className="md:block hidden w-[40px] h-[40px] rounded-full cursor-pointer"
+          />
+        </div>
+
         {collapse ? (
           <img
             src={xmark}

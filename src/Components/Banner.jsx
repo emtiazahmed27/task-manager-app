@@ -9,7 +9,7 @@ const Banner = () => {
   return (
     <div className="w-full min-h-[90vh]">
       <div
-        className="w-full min-h-[30vh] md:flex items-center py-3 shadow-sm mt-3"
+        className="w-full min-h-[30vh] md:flex items-center py-3 shadow-sm mt-3 z-0"
         data-aos="fade-left"
       >
         <div className="sm:w-[30%] w-[95%] mx-auto">
@@ -52,7 +52,7 @@ const Banner = () => {
         <div className="sm:w-[30%] w-[95%] mx-auto">
           <img src={question} alt="" className="w-[400px] mx-auto rounded-sm" />
         </div>
-        <div className="sm:w-[30%] w-[95%] mx-auto">
+        <div className="sm:w-[30%] sm:text-left  text-center w-[95%] mx-auto">
           <h1 className="font-semibold text-xl">
             When you should make a Task?
           </h1>
