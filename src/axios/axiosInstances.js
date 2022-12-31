@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const instances = axios.create({
-  baseURL: "https://taskmanagerapp-pi.vercel.app/",
+  baseURL: "http://localhost:3001/",
   headers: {
     // authorization: `bearer${localStorage.getItem("authToken")}`,
   },

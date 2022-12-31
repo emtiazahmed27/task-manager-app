@@ -4,6 +4,8 @@ import Main from "../Components/Main";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import TodoApp from "../Pages/TodoApp";
+import PrivateRoute from "./PrivateRoute";
+import PublicRoute from "./PublicRoute";
 
 export const router = createBrowserRouter([
   {
@@ -16,15 +18,27 @@ export const router = createBrowserRouter([
       },
       {
         path: "/todoapp",
-        element: <TodoApp></TodoApp>,
+        element: (
+          <PrivateRoute>
+            <TodoApp></TodoApp>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
-        element: <Login></Login>,
+        element: (
+          <PublicRoute>
+            <Login></Login>
+          </PublicRoute>
+        ),
       },
       {
         path: "/register",
-        element: <Register></Register>,
+        element: (
+          <PublicRoute>
+            <Register></Register>
+          </PublicRoute>
+        ),
       },
     ],
   },
